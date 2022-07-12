@@ -2,12 +2,13 @@
   padding: 10px;
   font-size: 20px;
   text-align: center;
+ 
 }
 
 .home-content-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   padding: 10px 10px 60px 10px;
 }
 
@@ -38,10 +39,10 @@
 
 .home-card{
 display: flex;
+align-items: center;
 flex-direction: column-reverse;
-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 border-radius: 20px;
-background-color: #FFFFFF;
+
 
 }
 
@@ -61,11 +62,14 @@ background-color: #FFFFFF;
 .home-content-container h1{
   width: 506px;
   margin-bottom: 20px;
+
 }
 
 .home-content-container p{
   width: 506px;
+  font-size: 24px;
   margin-bottom: 20px;
+ 
 }
 
 .home-content-container button{
@@ -132,22 +136,25 @@ background-color: #FFFFFF;
 @media (min-width: 1200px){
 
   .home-card{
+    align-items: center;
     flex-direction: row;
     justify-content: space-around;
     padding: calc(((85vh - 480px) / 2) - 20px ) 0;
+    max-height: 770px;
+
   }
   
 
   .home-content-container{
-    height: 480px;
-    width: 700px;
-    padding: 20px;
-   align-items: flex-start;
-   text-align: center;
-   align-content: space-between;
-   flex-flow: wrap;
-   flex-direction: column;
-  
+  height: 480px;
+  width: 700px;
+  padding: 20px;
+  align-items: flex-start;
+  text-align: center;
+  align-content: space-between;
+  flex-flow: wrap;
+  flex-direction: column;
+
   }
 
   .home-image-container {
@@ -159,7 +166,7 @@ background-color: #FFFFFF;
 
   .home-image-container svg{
     width: 100%;
-   
+ 
   }
 
   }
