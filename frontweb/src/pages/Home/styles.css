@@ -8,9 +8,11 @@
 .home-content-container{
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   padding: 10px 10px 60px 10px;
 }
+
+
 
 .home-content-container h1{
   width: 260px;
@@ -46,6 +48,12 @@ border-radius: 20px;
 
 }
 
+.buttom-click{
+  display: flex;
+  justify-content: center;
+
+}
+
 
 /* BREAKPOINTS */
 
@@ -72,10 +80,7 @@ border-radius: 20px;
  
 }
 
-.home-content-container button{
-  width: 506px;
-  
-}
+
 
 .home-image-container svg{
   width: 506px;
