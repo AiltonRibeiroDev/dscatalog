@@ -16,7 +16,7 @@ const Home = () => {
             </p>
             <div className='buttom-click'>
             <Link to={'/products'}>
-              <ButtonIcon />
+              <ButtonIcon text="INICIE AGORA A SUA BUSCA"/>
             </Link>
           </div>
           </div>

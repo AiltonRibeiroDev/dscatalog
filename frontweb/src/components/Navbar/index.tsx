@@ -29,11 +29,9 @@ const Navbar = () => {
               <NavLink to={'/'}> HOME </NavLink>
             </li>
             <li>
-            
               <NavLink to={'/products'}> CATÁLOGO </NavLink>
             </li>
             <li>
-             
               <NavLink to={'/admin'}> ADMIN </NavLink>
             </li>
           </ul>
