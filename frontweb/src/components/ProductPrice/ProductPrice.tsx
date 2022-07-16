@@ -1,4 +1,5 @@
 
+import { formatPrice } from 'util/formatters';
 import './ProductPrice.css'
 
 
@@ -16,7 +17,7 @@ const ProductPrice = ({price}: Props) =>{
 <div className='product-price-conteiner'>
 
 <span>R$</span>
-<h3>{price}</h3>
+<h3>{formatPrice(price)}</h3>
 
 </div>
 
