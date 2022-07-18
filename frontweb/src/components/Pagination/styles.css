@@ -1,0 +1,38 @@
+.pagintion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.pagination-item.active {
+  background-color: #407bff;
+}
+
+.arrow-previous{
+  transform: rotate(-180deg);
+}
+
+
+
+.arrow-inactive{
+  color: #E1E1E1;
+
+}
+
+.arrow-active{
+  color:  #407bff;
+}
