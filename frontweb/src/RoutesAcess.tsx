@@ -12,9 +12,11 @@ const RoutesAcess = () => (
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Catalog />}  />
-      <Route path="/products/:productID" element={<ProductDetails/>} />
+      <Route path="/products" element={<Catalog />} />
+      <Route path="/products/:productID" element={<ProductDetails />} />
       <Route path="/admin" element={<Admin />} />
+    
+        
     </Routes>
   </BrowserRouter>
 );

@@ -1,5 +1,5 @@
 import ProductPrice from 'components/ProductPrice/ProductPrice';
-import { Product } from 'types/pruduct';
+import { Product } from 'types/product';
 import './style-Card.css';
 
 type Props = {

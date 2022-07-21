@@ -1,9 +1,28 @@
 import { ReactComponent as ArrowIcon } from 'assets/images/Seta.svg';
 import ProductPrice from 'components/ProductPrice/ProductPrice';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { Product } from '../../../types/product';
 import './styles.css';
+import axios from 'axios';
+import { BASE_URL } from 'util/requests';
+import { useState, useEffect } from 'react';
 
 const ProductDetails = () => {
+  type UrlParams = {
+    productId: string;
+  };
+
+  const { productId } = useParams<UrlParams>();
+
+  const [product, setProduct] = useState<Product>();
+
+  useEffect(() => {
+    axios.get(BASE_URL + '/products/')
+    .then(response => {
+      setProduct(response.data);
+    });
+  }, [ productId ]);
+
   return (
     <div className="product-details-container">
       <div className="base-card product-details-card">
@@ -17,27 +36,17 @@ const ProductDetails = () => {
         <div className="row">
           <div className="col-xl-6">
             <div className="img-container">
-              <img
-                src="https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/2-big.jpg"
-                alt="Nome do Produto"
-              />
+              <img src={product?.imgUrl} alt={product?.name} />
             </div>
             <div className="name-price-container">
-              <h1>Nome do produto</h1>
-              <ProductPrice price={2345.89} />
+              <h1>{product?.name}</h1>
+              {product && <ProductPrice price={product?.price} />}
             </div>
           </div>
           <div className="col-xl-6">
             <div className="description-container">
               <h2>Descrição do produto</h2>
-              <p>
-                Seja um mestre em multitarefas com a capacidade para exibir
-                quatro aplicativos simultâneos na tela. A tela está ficando
-                abarrotada? Crie áreas de trabalho virtuais para obter mais
-                espaço e trabalhar com os itens que você deseja. Além disso,
-                todas as notificações e principais configurações são reunidas em
-                uma única tela de fácil acesso.
-              </p>
+              <p>{product?.description}</p>
             </div>
           </div>
         </div>
