@@ -17,7 +17,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState<Product>();
 
   useEffect(() => {
-    axios.get(BASE_URL + '/products/')
+    axios.get(`${BASE_URL} '/products/ ${productId}`)
     .then(response => {
       setProduct(response.data);
     });
